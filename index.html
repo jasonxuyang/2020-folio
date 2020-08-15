@@ -1,0 +1,854 @@
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175448338-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-175448338-1');
+        </script>
+
+        <meta charset="utf-8">
+        <link rel="canonical" href="https://jasonxuyang.com">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
+        <meta name="format-detection" content="telephone=no">
+        <title>Jason Yang - Product Designer</title>
+        <meta name="description" content="Jason Yang is a product designer based in Atlanta, GA. He is currently stuyding Industrial Design at Georiga Tech">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="jasonxuyang.com">
+        <meta property="og:title" content="Jason Yang - Product Designer">
+        <meta property="og:description" content="Jason Yang is a product designer based in Atlanta, GA. He is currently stuyding Industrial Design at Georiga Tech.">
+        <meta property="og:image" content="http://jasonxuyang.com/img/og-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <img src="img/og-image.jpg" id="og" alt="picture"/>
+        
+        <style>
+            html {
+                -webkit-text-size-adjust: none;
+                -webkit-font-smoothing: subpixel-antialiased;
+                -webkit-font-smoothing: antialiased;
+                height: 100%;
+                overflow: visible;
+            }
+
+            a,body,button,div,footer,form,h1,h2,h3,header,html,img,input,label,li,nav,p,select,span,table,textarea,ul {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font: inherit;
+                font-family: inherit;
+                font-size: 100%
+            }
+
+            @font-face {
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 400;
+                src: local('DM Sans Regular'), local('DMSans-Regular'),
+                    url('font/dm-sans-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+                    url('font/dm-sans-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            }
+
+            @font-face {
+                font-family: 'Libre Baskerville';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Libre Baskerville'), local('LibreBaskerville-Regular'),
+                    url('font/libre-baskerville-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+                    url('font/libre-baskerville-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            }
+
+
+            body {
+                font-family: 'DM Sans', sans-serif;
+                background: #ffffff;
+                color: #1A1A1A;
+                overscroll-behavior: none;
+            }
+
+            #og {
+                display: none;
+            }
+
+            main {
+               margin-left: 18.055vw; 
+               position: fixed;
+               top: 0;
+               left: 0;
+            }
+
+            h1 {
+                font-family:'Libre Baskerville', serif;
+                font-size: 13.333vw;
+                margin-bottom: 6.667vw;
+            }
+
+            h2 {
+                font-family: 'DM Sans', sans-serif;
+                font-size: 3.333vw;
+                margin-bottom: 0.833vw;
+            }
+
+            p {
+                font-family: 'DM Sans', sans-serif;
+                font-size: 2.222vw;
+            }
+
+            #scroller {
+                width: 6px;
+                background-color: #ffffff;
+            }
+
+
+            .scroll-container {
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                bottom: 0px;
+                width: 6px;
+                z-index: 50;
+                background-image: linear-gradient(360deg, #FBDA61 0%, #FF5ACD 100%);
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                overflow-x: hidden;
+                height: 100%;
+                width: 16.389vw;
+            }
+
+            #sidebar .top {
+                position: absolute;
+                top: 2.222vw;
+                left: 1.667vw;
+                width: 14.722vw;
+            }
+
+            #sidebar p {
+                margin-bottom: 0.833vw;
+            }
+
+            #sidebar .bottom {
+                position: absolute;
+                bottom: 2.222vw;
+                left: 1.667vw;
+                width: 14.722vw;
+            }
+            
+            #sidebar a {
+                display: block;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 2.222vw;
+                margin-bottom: 0.833vw;
+                text-decoration: none;
+                color: #1A1A1A;
+            }
+
+            #sidebar a:hover {
+                text-decoration: underline;
+            }
+
+            #sidebar a:last-child {
+                margin-bottom: 0;
+            }
+
+            #work {
+                margin-top: -0.417vw;
+                margin-bottom: 20vw;
+            }
+
+            #work .container {
+                position: relative;
+                text-align: center;
+                width: 52.917vw;
+                height: 26.458vw;
+                margin-bottom: 3.333vw;
+            }
+
+            #work .centered {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                z-index: 10;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 3.333vw;
+                color: #ffffff;
+                background-color: #1a1a1a;
+                opacity: 0;
+                width: 52.917vw;
+                height: 26.458vw;
+                transition: opacity, .25s;
+            }
+
+            #work .centered:hover {
+                opacity: 1;
+            }
+
+            #work .case-thumbnail {
+                width: 52.917vw;
+                height: 26.458vw;
+            }
+            #work .case-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 52.917vw;
+            }
+
+            #work .case-main {
+                width: 32.431vw;
+            }
+
+            #work .case-main p {
+                color: #808080;
+            }
+
+            #work .case-caption p {
+                text-align: right;
+                color: #1A1A1A;
+                margin-bottom: .833;
+            }
+
+            #work .case-caption p:last-child {
+                color: #808080;
+                margin-bottom: 0;
+            }
+
+            #work .left {
+                margin-left: 8.472vw;
+                margin-bottom: 13.333vw;
+            }
+
+            #work .right {
+                margin-left: 22.153vw;
+                margin-bottom: 13.333vw;
+            }
+
+            #work .left:last-child {
+                margin-bottom: 0;
+            }
+
+            #resume {
+                margin-bottom: 20vw;
+            }
+
+            #resume p {
+                display: block;
+                width: 52.986vw;
+                margin-left: 1.667vw;
+            }
+
+            #resume .resume-section {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                width: 80.278vw;
+            }
+
+            #resume .resume-items {
+                margin-top: 4.310vw;
+            }
+
+            #resume .resume-item {
+                margin-bottom: 2.222vw;
+            }
+            #resume .resume-item p:first-child {
+                color: #808080;
+            }
+
+            #resume .resume-item:last-child {
+                margin-bottom: 0;
+            }
+
+            #about {
+                margin-bottom: 20vw;
+            }
+            
+            #about .about-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 59.792vw;
+                margin-left: 8.472vw;
+            }
+
+            #about p {
+                display: block;
+                width: 32.430vw;
+                margin-bottom: 2.222vw;
+            }
+
+            #about p:last-child {
+                margin-bottom: 0;
+            }
+
+            #about .about-img {
+                width: 25.625vw;
+                height: 34.167vw;
+                margin-top: 20vw;
+            }
+
+            #contact {
+                padding-bottom: 6.667vw;
+            }
+
+            #contact a {
+                font-family: 'DM Sans', sans-serif;
+                font-size: 3.333vw;
+                margin-bottom: 3.333vw;
+                display: block;
+                color: #1a1a1a;
+                text-decoration: none; 
+            }
+
+            #contact a:last-child {
+                margin-bottom: 0;
+            }
+
+            #contact a:hover {
+                text-decoration: underline;
+            }
+
+            @media only screen and (max-width: 480px) {
+
+                @-webkit-keyframes launch-mobile {
+                    0%   { opacity: 0; visibility: hidden; }
+                    100% { opacity: 1; visibility: visible; }
+                }
+                @-moz-keyframes launch-mobile {
+                    0%   { opacity: 0; visibility: hidden; }
+                    100% { opacity: 1; visibility: visible; }
+                }
+                @-o-keyframes launch-mobile {
+                    0%   { opacity: 0; visibility: hidden;  }
+                    100% { opacity: 1; visibility: visible; }
+                }
+                @keyframes launch-mobile {
+                    0%   { opacity: 0; visibility: hidden;  }
+                    100% { opacity: 1; visibility: visible; }
+                }
+
+                main {
+                    margin-left: 4.267vw;
+                    visibility: hidden;
+                    opacity: 0;
+
+                    animation-name: launch-mobile;
+                    animation-duration: 1.5s;
+                    animation-iteration-count: 1;
+                    animation-delay: 2.5s;
+                    animation-fill-mode: forwards;
+                    animation-timing-function: cubic-bezier(0.5, 0, 0.75, 0);
+
+                    -webkit-animation-name: launch-mobile;
+                    -webkit-animation-duration: 1.5s;
+                    -webkit-animation-iteration-count: 1;
+                    -webkit-animation-delay: 2.5s;
+                    -webkit-animation-fill-mode: forwards;
+                    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.75, 0);
+
+                    -moz-animation-name: launch-mobile;
+                    -moz-animation-duration: 1.5s;
+                    -moz-animation-iteration-count: 1;
+                    -moz-animation-delay: 2.5s;
+                    -moz-animation-fill-mode: forwards;
+                    -moz-animation-timing-function: cubic-bezier(0.5, 0, 0.75, 0);
+
+                    -o-animation-name: launch-mobile;
+                    -o-animation-duration: 1.5s;
+                    -o-animation-iteration-count: 1;
+                    -o-animation-delay: 2.5s;
+                    -o-animation-fill-mode: forwards;
+                    -o-animation-timing-function: cubic-bezier(0.5, 0, 0.75, 0);
+                }
+
+                @-webkit-keyframes splash-mobile {
+                    0%   { opacity: 1; visibility: visible; }
+                    100% { opacity: 0; visibility: hidden; }
+                }
+                @-moz-keyframes splash-mobile {
+                    0%   { opacity: 1; visibility: visible; }
+                    100% { opacity: 0; visibility: hidden; }
+                }
+                @-o-keyframes splash-mobile {
+                    0%   { opacity: 1; visibility: visible; }
+                    100% { opacity: 0; visibility: hidden; }
+                }
+                @keyframes splash-mobile {
+                    0%   { opacity: 1; visibility: visible; }
+                    100% { opacity: 0; visibility: hidden; }
+                }
+
+                #sidebar {
+                    animation-name: splash-mobile;
+                    animation-duration: 1.5s;
+                    animation-iteration-count: 1;
+                    animation-delay: 2.5s;
+                    animation-fill-mode: forwards;
+                    animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+
+                    -webkit-animation-name: splash-mobile;
+                    -webkit-animation-duration: 1.5s;
+                    -webkit-animation-iteration-count: 1;
+                    -webkit-animation-delay: 2.5s;
+                    -webkit-animation-fill-mode: forwards;
+                    -webkit-animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+
+                    -moz-animation-name: splash-mobile;
+                    -moz-animation-duration: 1.5s;
+                    -moz-animation-iteration-count: 1;
+                    -moz-animation-delay: 2.5s;
+                    -moz-animation-fill-mode: forwards;
+                    -moz-animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+
+                    -o-animation-name: splash-mobile;
+                    -o-animation-duration: 1.5s;
+                    -o-animation-iteration-count: 1;
+                    -o-animation-delay: 2.5s;
+                    -o-animation-fill-mode: forwards;
+                    -o-animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+
+                    background: #1a1a1a;
+                    width: 100vw;
+                    height: 100vh;
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                #sidebar .top {
+                    position: static;
+                    margin-top: 4.267vw;;
+                    margin-left: 4.267vw;;
+                    width: 91.467vw;
+                }
+
+                #sidebar p {
+                    font-family:'Libre Baskerville', serif;
+                    font-size: 12.8vw;
+                    margin-bottom: 8.533vw;
+                    color: #ffffff;
+                }
+
+                #sidebar .bottom {
+                    display: none;
+                }
+
+                .scroll-container {
+                    display: none;
+                }
+
+                h1 {
+                    margin-left: -4.267vw;
+                    font-size: 19.2vw;
+                }
+
+                h2 {
+                    font-size: 6.4vw;
+                }
+
+                p {
+                    font-size: 4.267vw;
+                }
+
+                #work .container {
+                    width: 91.467vw;
+                    height: 45.867vw;
+                }
+
+                #work .centered {
+                    width: 91.467vw;
+                    height: 45.867vw;
+                    font-size: 4.267vw;
+                }
+
+                #work .case-thumbnail {
+                    width: 91.467vw;
+                    height: 45.867vw;
+                }
+
+                #work .left {
+                    margin-left: 0px;
+                }
+
+                #work .right {
+                    margin-left: 0px;
+                }
+
+                #work .case-info {
+                    display: flex;
+                    flex-direction: column;
+                    width: 91.467vw;
+                }
+
+                #work .case-main {
+                    width: 91.467vw;
+                }
+
+                #work .case-caption {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 3.2vw;
+                }
+
+                #work .case-caption p {
+                    text-align: left;
+                    margin-right: 3.2vw;
+                }
+
+                #resume .resume-section {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 8.533vw;
+                    width: 91.467vw;
+                }
+
+                #resume .resume-items {
+                    margin-top: 1.6vw;
+                }
+
+                #resume .resume-item {
+                    margin-bottom: 3.2vw;
+                }
+
+                #resume p {
+                    width: 91.467vw;
+                    margin-left: 0px;
+                    margin-bottom: 0.533vw;
+                }
+
+                #resume p:last-child {
+                    margin-bottom: 0;
+                }
+
+                #about .about-container {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    width: 91.467vw;
+                    margin-left: 0px;
+                }
+
+                #about p {
+                    display: block;
+                    width: 91.467vw;
+                    margin-bottom: 4.267vw;
+                }
+
+                #about .about-img {
+                    width: 43.467vw;
+                    height: 58.133vw;
+                    margin-top: 0;
+                    margin-bottom: 4.267vw;
+                }
+
+                #contact a {
+                    font-size: 4.267vw;
+                    margin-bottom: 4.267vw;
+                }
+
+                #contact {
+                    padding-bottom: 4.267vw;
+                }
+
+
+            }
+        </style>
+
+        <script>history.scrollRestoration = "manual"</script>
+
+        <script type="text/javascript">
+            !function(o, c) {
+                var n = c.documentElement
+                  , t = " w-mod-";
+                n.className += t + "js",
+                ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+            }(window, document);
+        </script>
+        
+    </head>
+
+    <body id="body">
+        
+        <div class="scroll-container">
+            <div id="scroller"></div>
+        </div>
+
+        <div id="sidebar">
+            <div class="top">
+                <p>Hi, I'm Jason.</p>
+                <p>I study design @Georgia Tech.</p>
+                <p>I like building cool things.</p>
+            </div>
+            <div class="bottom">
+                <a href="#work">Work</a>
+                <a href="#resume">Resume</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <main id="main">
+            <section id="work">
+                <h1 class="fade-work">Work</h1>
+                
+                <div class="left">
+                    <div class="container fade-work" data-tilt data-tilt-scale=".95" data-tilt-reverse="true" data-tilt-speed="1500" data-tilt-perspective="5000" data-tilt-max="10">
+                        <div class="centered">Coming Soon</div>
+                        <img src="img/thumb-case-bits.jpg" class="case-thumbnail" alt="picture"/>
+                    </div>
+                    <div class="case-info">
+                        <div class="case-main">
+                            <h2 class="fade-work">Bits of Good</h2>
+                            <p class="fade-work">Helping non-profits connect with their commmunity of donors and volunteers.</p>
+                        </div>
+                        <div class="case-caption">
+                            <p class="fade-work">Product Design</p>
+                            <p class="fade-work">Student Org</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right">
+                    <div class="container fade-work" data-tilt data-tilt-scale=".95" data-tilt-reverse="true" data-tilt-speed="1500" data-tilt-perspective="5000" data-tilt-max="10">
+                        <div class="centered">Coming Soon</div>
+                        <img src="img/thumb-case-crunchy.jpg" class="case-thumbnail" alt="picture"/>
+                    </div>
+                    <div class="case-info fade">
+                        <div class="case-main">
+                            <h2 class="fade-work">Crunchyroll</h2>
+                            <p class="fade-work">Improving the simulcast experience for anime lovers everywhere.</p>
+                        </div>
+                        <div class="case-caption">
+                            <p class="fade-work">Product Design</p>
+                            <p class="fade-work">For Fun</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="left">
+                    <div class="container fade-work" data-tilt data-tilt-scale=".95" data-tilt-reverse="true" data-tilt-speed="1500" data-tilt-perspective="5000" data-tilt-max="10">
+                        <div class="centered">Coming Soon</div>
+                        <img src="img/thumb-case-japan.jpg" class="case-thumbnail" alt="picture"/>
+                    </div>
+                    <div class="case-info">
+                        <div class="case-main">
+                            <h2 class="fade-work">Japan is Cool.</h2>
+                            <p class="fade-work">Japan has the highest concentration of World Heritage Sites in the World. I thought that was pretty cool.</p>
+                        </div>
+                        <div class="case-caption">
+                            <p class="fade-work">Web Design</p>
+                            <p class="fade-work">For Fun</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <section id="resume">
+                <h1 class="fade-resume">Resume</h1>
+
+                <div class="resume-section">
+                    <h2 class="fade-resume">Education</h2>
+                    <div class="resume-items">
+                        <div class="resume-item">
+                            <p class="fade-resume">Georgia Tech (Present)</p>
+                            <p class="fade-resume">Bachelor of Science, Industrial Design</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="fade-resume">Tokyo Tech (Summer 2018)</p>
+                            <p class="fade-resume">Summer Program in Sustainable Development</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h2 class="fade-resume">Experience</h2>
+                    <div class="resume-items">
+                        <div class="resume-item">
+                            <p class="fade-resume">BitPay</p>
+                            <p class="fade-resume">Product Design Intern (Spring 2020)</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="fade-resume">Spreetail</p>
+                            <p class="fade-resume">Graphic Design Intern (Summer 2019)</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="fade-resume">NPR</p>
+                            <p class="fade-resume">Creative Intern (Spring 2019)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h2 class="fade-resume">Student Orgs</h2>
+                    <div class="resume-items">
+                        <div class="resume-item">
+                            <p class="fade-resume">Bits of Good</p>
+                            <p class="fade-resume">Director of Design (Present)</p>
+                            <p class="fade-resume">Associate Director of Design (Spring 2020)</p>
+                            <p class="fade-resume">Product Designer (Fall 2019)</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="fade-resume">HackGT</p>
+                            <p class="fade-resume">Design Team Member (Present)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h2 class="fade-resume">Expertise</h2>
+                    <div class="resume-items">
+                        <div class="resume-item">
+                            <p class="fade-resume">Skills</p>
+                            <p class="fade-resume">User Experience</p>
+                            <p class="fade-resume">Product Thinking</p>
+                            <p class="fade-resume">Visual Design</p>
+                            <p class="fade-resume">Illustration</p>
+                            <p class="fade-resume">Front-end (just a smidge)</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="fade-resume">Software</p>
+                            <p class="fade-resume">Adobe CC</p>
+                            <p class="fade-resume">Figma / Sketch / XD / Invision</p>
+                            <p class="fade-resume">Protopie / After Effects</p>
+                            <p class="fade-resume">VS Code</p>
+                            <p class="fade-resume">HTML / CSS / JS</p>
+                            <p class="fade-resume">React / Gatsby / Next</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="about">
+                <h1 class="fade-about">About</h1>
+                <div class="about-container">
+                    <div class="content-container">
+                        <p class="fade-about">This is an old picture of me and my brother. I’m the one holding the taro popsicle and sporting the peace sign.</p>
+                        <p class="fade-about">I'm a design student currently trying to claw my way through my degree (almost there).</p>
+                        <p class="fade-about">People know me as the guy who plays too much league, a self pronounced weeb, and the weird dude who keeps calling himself "principal designer".</p>
+                    </div>
+                    <img src="img/about-img.jpg" class="about-img fade-about" alt="picture"/>
+                </div>
+            </section>
+            
+            <section id="contact">
+                <h1 class="fade-contact">Contact</h1>
+                <a href="https://www.linkedin.com/in/jasonxuyang/" target="_blank" class="fade-contact">LinkedIn</a>
+                <a href="mailto:jasonxuyang@gmail.com" class="fade-contact">Email</a>
+            </section>
+        </main>
+
+        <script src="vanilla-tilt/dist/vanilla-tilt.min.js"></script>
+        <script src="scrollreveal/dist/scrollreveal.min.js"></script>
+        <script src="smooth-scroll/dist/smooth-scroll.min.js"></script>
+
+        <script>
+            ScrollReveal().reveal('.fade-work', { delay: 0, opacity: 0, duration: 1000, distance: "25px", easing: 'ease-out', interval: 50, viewFactor: 0 });
+            ScrollReveal().reveal('.fade-resume', { delay: 0, opacity: 0, duration: 1000, distance: "25px", easing: 'ease-out', interval: 50, viewFactor: 0 });
+            ScrollReveal().reveal('.fade-about', { delay: 0, opacity: 0, duration: 1000, distance: "25px", easing: 'ease-out', interval: 50, viewFactor: 0 });
+            ScrollReveal().reveal('.fade-contact', { delay: 0, opacity: 0, duration: 1000, distance: "25px", easing: 'ease-out', interval: 50, viewFactor: 0 });
+        </script>
+
+        <script>
+            var scroll = new SmoothScroll('a[href*="#"]', {
+                speed: 200,
+                easing: 'easeInOutQuad'
+            });
+        </script>
+
+        <script>
+            // First we get the elements we need, the body and our container on which
+            // we are going to apply a smooth scroll. You will always need a container
+            // to apply a smooth scroll. You will not be able to apply it directly to
+            // the body.
+            const body = document.body;
+            const main = document.querySelector('main');
+            const scroller = document.getElementById('scroller');
+
+            // We define variables we will need later. 
+            // 2 variables to store the scroll position and 2 variables to store the 
+            // container position.
+            let sx = 0;
+            let sy = 0;
+
+            let dx = sx;
+            let dy = sy;
+            let pct = 0;
+
+            // Then we fix our container so it won't move when the user scrolls.
+            // We will move it ourself with the Linear Interpolation and translations.
+            // main.style.position = 'fixed';
+            // main.style.top = 0;
+            // main.style.left = 0;
+            
+            scroller.style.position = 'fixed';
+            scroller.style.bottom = 0;
+            scroller.style.left = 0;
+
+
+            // We bind a scroll event to the window to watch scroll position.
+            window.addEventListener('scroll', scroll);
+
+            function scroll() {
+                // We only update the scroll position variables
+                sx = window.pageXOffset;
+                sy = window.pageYOffset;
+            }
+
+            // Then we start a `requestAnimationFrame` loop. 
+
+            window.requestAnimationFrame(render);
+
+            function render() {
+                
+                // The trick is to set a height to the body to keep the browser scroll bar.
+                body.style.height = main.clientHeight + 'px';
+
+                // We calculate our container position by using our Linear Interpolation method.
+
+                dx = lerp(dx, sx, 0.07);
+                dy = lerp(dy, sy, 0.07);
+
+                dx = Math.floor(dx * 100) / 100;
+                dy = Math.floor(dy * 100) / 100;
+
+                pct = 100 - getScrollPercent();
+
+                // Finally we translate our container to its new positions.
+                // Don't forget to add a minus sign because the container needs to move in 
+                // the opposite direction of the window scroll.
+                main.style.transform = `translate(-${dx}px, -${dy}px)`;
+                scroller.style.height = `${pct}vh`;
+
+
+                // And we loop again.
+                window.requestAnimationFrame(render);
+            }
+
+            // This is our Linear Interpolation method.
+            function lerp(a, b, n) {
+                return (1 - n) * a + n * b;
+            }
+
+            function getScrollPercent() {
+                var h = document.documentElement, 
+                    b = document.body,
+                    st = 'scrollTop',
+                    sh = 'scrollHeight';
+                return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+            }
+        </script>
+    </body>
+</html>
